@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hamsey.co/sitemap.xml
+
