@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
-// Playwrite AU SA is available as next/font: Playwrite_AU_SA
-// eslint-disable-next-line camelcase
-import { Playwrite_AU_SA } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Montserrat,
+  Poppins,
+  Playwrite_AU_SA,
+} from "next/font/google";
 import "./globals.css";
 import AnimationInitializer from "@/components/AnimationInitializer";
 
@@ -32,7 +35,6 @@ const montserrat = Montserrat({
 
 const playwrite = Playwrite_AU_SA({
   variable: "--font-playwrite",
-  subsets: ["latin"],
   display: "swap",
 });
 

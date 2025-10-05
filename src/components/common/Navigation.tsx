@@ -7,7 +7,7 @@ type Props = { theme?: "dark" | "light" };
 
 const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path;
+  // const isActive = (path: string) => pathname === path;
 
   return (
     <header className={`header ${theme === "light" ? "light-header" : ""}`}>

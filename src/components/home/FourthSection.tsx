@@ -17,8 +17,8 @@ const FourthSection: React.FC = () => {
           </h1>
           <p className="second-section-description white-text">
             With end-to-end encryption, your personal messages. Only you and the
-            person you're talking to can read to them, and nobody in between,
-            not even Us.
+            person you&apos;re talking to can read them, and nobody in between,
+            not even us.
           </p>
         </div>
       </div>
