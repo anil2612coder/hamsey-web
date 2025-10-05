@@ -1,5 +1,23 @@
-import SEOMetaTags from "@/components/common/SEOMetaTags";
-import Navigation from "@/components/common/Navigation";
+import ContactHeroSection from "@/components/contact/ContactHeroSection";
+import ContactFormSection from "@/components/contact/ContactFormSection";
+import ContactInfoSection from "@/components/contact/ContactInfoSection";
+import Footer from "@/components/home/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Hamsey | Get Support & Send Feedback",
+  description:
+    "Have questions or feedback about Hamsey dating app? Contact our support team for assistance or to share your experience with us.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    title: "Contact Hamsey | Get Support & Send Feedback",
+    description:
+      "Have questions or feedback about Hamsey dating app? Contact our support team for assistance or to share your experience with us.",
+    url: "https://hamsey.co/contact",
+    images: [{ url: "/image/logo.png" }],
+  },
+};
 
 export default function ContactPage() {
   const contactUsSchema = {
@@ -30,28 +48,15 @@ export default function ContactPage() {
 
   return (
     <>
-      <SEOMetaTags
-        title="Contact Hamsey | Get Support & Send Feedback"
-        description="Have questions or feedback about Hamsey dating app? Contact our support team for assistance or to share your experience with us."
-        keywords="contact Hamsey, dating app support, Hamsey help, dating app feedback, contact dating app"
-        canonicalUrl="https://hamsey.co/contact"
-        schema={contactUsSchema as unknown as Record<string, unknown>}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactUsSchema) }}
       />
       <main className="contact-us-container">
-        <Navigation />
-        <section className="contact-hero-container">
-          <div className="contact-hero-wrapper">
-            <div className="contact-hero-content">
-              <h1 className="contact-hero-title">
-                Contact <span className="contact-hero-title-span">Hamsey</span>
-              </h1>
-              <p className="contact-hero-description">
-                We’d love to hear from you. Reach out with any questions or
-                feedback.
-              </p>
-            </div>
-          </div>
-        </section>
+        <ContactHeroSection />
+        <ContactFormSection />
+        <ContactInfoSection />
+        <Footer />
       </main>
     </>
   );

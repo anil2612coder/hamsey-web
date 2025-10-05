@@ -1,14 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
 const FourthSection: React.FC = () => {
   return (
     <div className="third-section">
       <div className="second-section-container">
         <div className="third-section-img">
-          <img
+          <Image
             className="second-section-image"
             src="/image/3.webp"
             alt="second-section"
+            width={800}
+            height={600}
           />
         </div>
         <div className="second-content">

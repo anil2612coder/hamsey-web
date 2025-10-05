@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   isBg?: string;
@@ -8,12 +9,24 @@ type Props = {
   description: string;
 };
 
-const SecondSection: React.FC<Props> = ({ isBg = "", imageUrl, title, titleSpan, description }) => {
+const SecondSection: React.FC<Props> = ({
+  isBg = "",
+  imageUrl,
+  title,
+  titleSpan,
+  description,
+}) => {
   return (
     <div className={`second-section ${isBg}`}>
       <div className="second-section-container">
         <div className="second-section-img animate-on-scroll slide-left">
-          <img className="second-section-image" src={imageUrl} alt="second-section" />
+          <Image
+            className="second-section-image"
+            src={imageUrl}
+            alt="second-section"
+            width={800}
+            height={600}
+          />
         </div>
         <div className="second-content animate-on-scroll slide-right">
           <h1 className="second-section-title">
@@ -27,5 +40,3 @@ const SecondSection: React.FC<Props> = ({ isBg = "", imageUrl, title, titleSpan,
 };
 
 export default SecondSection;
-
-

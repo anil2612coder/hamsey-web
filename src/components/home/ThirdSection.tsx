@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   imageUrl: string;
@@ -7,7 +8,12 @@ type Props = {
   description: string;
 };
 
-const ThirdSection: React.FC<Props> = ({ imageUrl, title, titleSpan, description }) => {
+const ThirdSection: React.FC<Props> = ({
+  imageUrl,
+  title,
+  titleSpan,
+  description,
+}) => {
   return (
     <div className="second-section">
       <div className="second-section-container third-section-container">
@@ -18,7 +24,13 @@ const ThirdSection: React.FC<Props> = ({ imageUrl, title, titleSpan, description
           <p className="second-section-description">{description}</p>
         </div>
         <div className="second-section-img animate-on-scroll slide-right">
-          <img className="second-section-image" src={imageUrl} alt="second-section" />
+          <Image
+            className="second-section-image"
+            src={imageUrl}
+            alt="second-section"
+            width={800}
+            height={600}
+          />
         </div>
       </div>
     </div>
@@ -26,5 +38,3 @@ const ThirdSection: React.FC<Props> = ({ imageUrl, title, titleSpan, description
 };
 
 export default ThirdSection;
-
-

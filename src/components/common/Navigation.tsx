@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 type Props = { theme?: "dark" | "light" };
 
@@ -14,7 +15,14 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
       <div className="header-content">
         <div className="logo-header animate-fade-in">
           <Link href="/">
-            <img src="/image/logo.svg" alt="Hemsey logo" />
+            <Image
+              src="/image/logo.svg"
+              alt="Hemsey logo"
+              width={150}
+              height={40}
+              priority
+              className=""
+            />
           </Link>
         </div>
         <div className="header-nav animate-fade-in">

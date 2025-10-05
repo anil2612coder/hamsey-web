@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HemseySectionFooter: React.FC = () => {
   const [selectedApp, setSelectedApp] = useState<"android" | "ios">("android");
@@ -16,10 +17,12 @@ const HemseySectionFooter: React.FC = () => {
         <div className="footer-top-section">
           <div className="footer-qr-container animate-fade-in">
             <div className="footer-qr-inner">
-              <img
+              <Image
                 src={qrCodes[selectedApp]}
                 alt={`QR code for ${selectedApp} app`}
                 className="footer-qr-image"
+                width={158}
+                height={158}
               />
               <div className="footer-download-row">
                 <span
@@ -50,7 +53,12 @@ const HemseySectionFooter: React.FC = () => {
           <div className="footer-app-info animate-fade-in delay-200">
             <div className="footer-app-text">
               <div className="logo-header">
-                <img src="/image/logo.svg" alt="hamsey logo" />
+                <Image
+                  src="/image/logo.svg"
+                  alt="hamsey logo"
+                  width={150}
+                  height={40}
+                />
               </div>
               <p className="footer-description">
                 There are multiple ways to connect with people, but not all are

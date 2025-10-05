@@ -1,4 +1,3 @@
-import SEOMetaTags from "@/components/common/SEOMetaTags";
 import HeroSection from "@/components/home/HeroSection";
 import SecondSection from "@/components/home/SecondSection";
 import ThirdSection from "@/components/home/ThirdSection";
@@ -6,6 +5,29 @@ import FourthSection from "@/components/home/FourthSection";
 import FifthSection from "@/components/home/FifthSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import Footer from "@/components/home/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hamsey - Connect with People Nearby",
+  description:
+    "Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative dating app.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    title: "Hamsey - Connect with People Nearby",
+    description:
+      "Hamsey helps you connect with people nearby safely and securely.",
+    url: "https://hamsey.co/",
+    images: [{ url: "/image/logo.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hamsey - Connect with People Nearby",
+    description:
+      "Hamsey helps you connect with people nearby safely and securely.",
+    images: ["/image/logo.png"],
+  },
+};
 
 export default function Home() {
   const homePageSchema = {
@@ -24,12 +46,10 @@ export default function Home() {
 
   return (
     <>
-      <SEOMetaTags
-        title="Hamsey - Connect with People Nearby"
-        description="Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative dating app."
-        keywords="dating app, meet people nearby, safe dating, online dating, Hamsey app"
-        canonicalUrl="https://hamsey.co/"
-        schema={homePageSchema}
+      {/* Structured data for Home page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
       />
       <div className="homepage-container">
         <HeroSection />

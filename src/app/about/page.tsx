@@ -1,5 +1,25 @@
-import SEOMetaTags from "@/components/common/SEOMetaTags";
-import Navigation from "@/components/common/Navigation";
+import AboutHeroSection from "@/components/about/AboutHeroSection";
+import AboutStorySection from "@/components/about/AboutStorySection";
+import AboutMissionSection from "@/components/about/AboutMissionSection";
+import AboutTeamSection from "@/components/about/AboutTeamSection";
+import AboutCtaSection from "@/components/about/AboutCtaSection";
+import Footer from "@/components/home/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Hamsey | Our Story, Mission & Team",
+  description:
+    "Discover the story behind Hamsey dating app. Learn about our mission to create meaningful connections and the team making it happen.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    type: "website",
+    title: "About Hamsey | Our Story, Mission & Team",
+    description:
+      "Discover the story behind Hamsey dating app. Learn about our mission to create meaningful connections and the team making it happen.",
+    url: "https://hamsey.co/about",
+    images: [{ url: "/image/logo.png" }],
+  },
+};
 
 export default function AboutPage() {
   const aboutUsSchema = {
@@ -21,22 +41,17 @@ export default function AboutPage() {
 
   return (
     <>
-      <SEOMetaTags
-        title="About Hamsey | Our Story, Mission & Team"
-        description="Discover the story behind Hamsey dating app. Learn about our mission to create meaningful connections and the team making it happen."
-        keywords="about Hamsey, dating app mission, Hamsey team, dating app story, safe dating platform"
-        canonicalUrl="https://hamsey.co/about"
-        schema={aboutUsSchema as unknown as Record<string, unknown>}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutUsSchema) }}
       />
       <main className="about-us-container">
-        {/* Minimal placeholder; sections will be ported next */}
-        <Navigation />
-        <section className="about-hero-section">
-          <div className="about-hero-content">
-            <h1 className="about-hero-title">About Hamsey</h1>
-            <p className="about-hero-subtitle">Our story, mission, and team</p>
-          </div>
-        </section>
+        <AboutHeroSection />
+        <AboutStorySection />
+        <AboutMissionSection />
+        <AboutTeamSection />
+        <AboutCtaSection />
+        <Footer />
       </main>
     </>
   );
