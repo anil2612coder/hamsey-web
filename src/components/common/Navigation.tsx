@@ -7,7 +7,7 @@ import Image from "next/image";
 type Props = { theme?: "dark" | "light" };
 
 const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   // const isActive = (path: string) => pathname === path;
 
   return (

@@ -29,7 +29,7 @@ const ContactFormSection: React.FC = () => {
         <div className="contact-form-header">
           <h2 className="contact-form-title">Send us a Message</h2>
           <p className="contact-form-description">
-            Fill out the form below and we'll get back to you as soon as
+            Fill out the form below and we&apos;ll get back to you as soon as
             possible.
           </p>
         </div>

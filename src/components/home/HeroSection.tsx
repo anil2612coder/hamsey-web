@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navigation from "../common/Navigation";
-import Image from "next/image";
+// import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (

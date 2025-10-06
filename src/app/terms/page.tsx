@@ -115,10 +115,10 @@ export default function TermsPage() {
               </p>
               <h2>7. Disclaimer of Warranties</h2>
               <p>
-                Our platform is provided "as is" and "as available" without any
-                warranties of any kind, either express or implied. We do not
-                guarantee that our platform will be uninterrupted, secure, or
-                error-free.
+                Our platform is provided &quot;as is&quot; and &quot;as
+                available&quot; without any warranties of any kind, either
+                express or implied. We do not guarantee that our platform will
+                be uninterrupted, secure, or error-free.
               </p>
               <h2>8. Limitation of Liability</h2>
               <p>
