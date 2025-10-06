@@ -12,7 +12,6 @@ const AboutTeamSection: React.FC = () => {
       role: "Co-founder & CTO",
       image: "/image/shaurya.jpeg",
     },
-
     { name: "Harsh", role: "Backend Developer", image: "/image/Harsh.png" },
   ];
 
