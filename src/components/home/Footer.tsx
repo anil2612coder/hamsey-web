@@ -144,6 +144,9 @@ const HemseySectionFooter: React.FC = () => {
           <div className="footer-nav-column animate-fade-in delay-400">
             <h3 className="footer-nav-title">Company</h3>
             <div className="footer-nav-links">
+              <Link href="/child-safety" className="footer-nav-link">
+                Child Safety Standards
+              </Link>
               <Link href="/terms" className="footer-nav-link">
                 Terms & Conditions
               </Link>
