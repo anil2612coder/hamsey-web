@@ -43,8 +43,8 @@ export default function DeleteAccountPage() {
         >
           <h1>Delete your Hamsey account</h1>
           <p>
-            We're sorry to see you go. Submit the form below to request deletion
-            of your account.
+            We&apos;re sorry to see you go. Submit the form below to request
+            deletion of your account.
           </p>
         </section>
 

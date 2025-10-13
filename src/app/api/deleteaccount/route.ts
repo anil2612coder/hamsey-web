@@ -5,7 +5,8 @@ export async function POST(request: Request) {
     const body = await request.json().catch(() => ({}));
     const email = typeof body?.email === "string" ? body.email.trim() : "";
     const phone = typeof body?.phone === "string" ? body.phone.trim() : "";
-    const reason = typeof body?.reason === "string" ? body.reason.trim() : "";
+    // Note: we accept reason but do not use it server-side yet
+    // const reason = typeof body?.reason === "string" ? body.reason.trim() : "";
 
     if (!email && !phone) {
       return NextResponse.json(
@@ -17,7 +18,7 @@ export async function POST(request: Request) {
     // Placeholder: enqueue deletion request, notify support, etc.
     // For now we simply acknowledge receipt without revealing account existence.
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (_) {
     return NextResponse.json({ error: "Unexpected error" }, { status: 500 });
   }
 }
