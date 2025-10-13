@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     // Placeholder: enqueue deletion request, notify support, etc.
     // For now we simply acknowledge receipt without revealing account existence.
     return NextResponse.json({ success: true });
-  } catch (_) {
+  } catch {
     return NextResponse.json({ error: "Unexpected error" }, { status: 500 });
   }
 }

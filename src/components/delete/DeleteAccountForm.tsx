@@ -37,10 +37,16 @@ export default function DeleteAccountForm() {
       setEmail("");
       setPhone("");
       setReason("");
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const message =
+        err instanceof Error
+          ? err.message
+          : typeof err === "string"
+          ? err
+          : "Something went wrong";
       setStatus({
         type: "error",
-        message: err?.message || "Something went wrong",
+        message,
       });
     }
   }
