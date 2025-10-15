@@ -56,13 +56,13 @@ export default function PrivacyPage() {
             <div className="privacy-content animate-on-scroll slide-up">
               <h2>1. Introduction</h2>
               <p>
-                Hamsey ("we," "our," or "us") is committed to protecting your
-                privacy. This Privacy Policy explains how we collect, use,
-                disclose, and safeguard your information when you use our
-                proximity-based dating application. Please read this Privacy
-                Policy carefully. By accessing or using our platform, you
-                acknowledge that you have read, understood, and agree to be
-                bound by all the terms of this Privacy Policy.
+                Hamsey (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is
+                committed to protecting your privacy. This Privacy Policy
+                explains how we collect, use, disclose, and safeguard your
+                information when you use our proximity-based dating application.
+                Please read this Privacy Policy carefully. By accessing or using
+                our platform, you acknowledge that you have read, understood,
+                and agree to be bound by all the terms of this Privacy Policy.
               </p>
 
               <h2>2. Information We Collect</h2>
