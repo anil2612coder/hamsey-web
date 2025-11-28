@@ -158,10 +158,20 @@ const HemseySectionFooter: React.FC = () => {
         </div>
 
         <p className="footer-description footer-copyright">
-          By continuing past this Page, you agree to our Terms of Service,
-          Cookie Policy, Privacy Policy and Content Policies. All trademarks are
-          properties of their respective owners. 2025 © Hamsey Neosolve Ventures
-          India Ltd. All rights reserved.
+          By continuing past this Page, you agree to our{" "}
+          <Link href="/terms" className="footer-copyright-link">
+            Terms of Service
+          </Link>
+          , Cookie Policy,{" "}
+          <Link href="/privacy" className="footer-copyright-link">
+            Privacy Policy
+          </Link>{" "}
+          and{" "}
+          <Link href="/content-policy" className="footer-copyright-link">
+            Content Policies
+          </Link>
+          . All trademarks are properties of their respective owners. 2025 ©
+          Hamsey Neosolve Ventures India Ltd. All rights reserved.
         </p>
       </div>
     </div>

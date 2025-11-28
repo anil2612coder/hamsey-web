@@ -676,6 +676,15 @@ body {
   color: #fff;
   font-size: 12px;
 }
+.footer-copyright-link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  transition: text-decoration-color 0.2s ease;
+}
+.footer-copyright-link:hover {
+  text-decoration-color: #fff;
+}
 
 /* Responsive */
 @media (min-width: 768px) {
