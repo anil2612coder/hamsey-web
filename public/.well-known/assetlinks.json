@@ -1,13 +1,16 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.hamsey.co",
       "sha256_cert_fingerprints": [
         "DE:66:91:40:F1:C6:48:A7:FA:9F:E1:30:79:E4:78:B7:10:41:75:F0:41:AC:27:1A:C4:AA:BC:33:09:03:FF:AE",
         "1B:BA:C1:AF:2D:22:6E:2B:EC:2F:FC:89:DB:B4:81:3B:A0:C8:FF:13:E5:5E:11:06:67:82:00:05:2F:EF:F5:35",
-        "E3:EE:93:BC:C8:97:87:0B:FC:76:70:56:1D:87:0E:DA:5E:74:B0:49:59:39:12:3C:2E:04:AD:A1:3A:AA:76:0C"
+        "E3:EE:93:BC:C8:97:87:0B:FC:76:70:56:1D:87:0E:DA:5E:74:B0:49:59:39:12:3C:2E:04:AD:A1:3A:AA:76:0C",
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
       ]
     }
   }
