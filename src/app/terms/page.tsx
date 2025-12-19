@@ -3,16 +3,22 @@ import Footer from "@/components/home/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Hamsey Dating App",
+  title: "Terms and Conditions | Hamsey",
   description:
-    "Read the terms and conditions for using Hamsey dating app. Learn about user eligibility, account registration, content policies, and more.",
+    "Read the terms and conditions for using Hamsey. Learn about user eligibility, account registration, content policies, and more.",
   alternates: { canonical: "/terms" },
   openGraph: {
     type: "website",
-    title: "Terms and Conditions | Hamsey Dating App",
-    description: "Read the terms and conditions for using Hamsey dating app.",
+    title: "Terms and Conditions | Hamsey",
+    description: "Read the terms and conditions for using Hamsey.",
     url: "https://hamsey.co/terms",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey Terms and Conditions" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms and Conditions | Hamsey",
+    description: "Read the terms and conditions for using Hamsey.",
+    images: ["/image/og-image.png"],
   },
 };
 
@@ -20,14 +26,14 @@ export default function TermsPage() {
   const termsSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Terms and Conditions | Hamsey Dating App",
+    name: "Terms and Conditions | Hamsey",
     url: "https://hamsey.co/terms",
     description:
-      "Read the terms and conditions for using Hamsey dating app. Learn about user eligibility, account registration, content policies, and more.",
+      "Read the terms and conditions for using Hamsey. Learn about user eligibility, account registration, content policies, and more.",
     mainEntity: {
       "@type": "WebPageElement",
       name: "Terms and Conditions Document",
-      text: "These terms outline the rules, guidelines, and legal agreements between users and Hamsey dating app.",
+      text: "These terms outline the rules, guidelines, and legal agreements between users and Hamsey.",
     },
   } as const;
 
@@ -54,7 +60,7 @@ export default function TermsPage() {
             <div className="terms-content animate-on-scroll slide-up">
               <h2>1. Acceptance of Terms</h2>
               <p>
-                By accessing or using Hamsey, our proximity-based dating
+                By accessing or using Hamsey, our proximity-based social networking
                 application, you agree to be bound by these Terms and
                 Conditions. If you do not agree to these terms, please do not
                 use our service. These terms constitute a legally binding
@@ -86,7 +92,7 @@ export default function TermsPage() {
               <h3>2.2 Geographic Restrictions</h3>
               <ul>
                 <li>
-                  Our service is available in most countries where dating apps
+                  Our service is available in most countries where social networking apps
                   are permitted
                 </li>
                 <li>

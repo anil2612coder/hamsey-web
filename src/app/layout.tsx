@@ -45,25 +45,61 @@ export const metadata: Metadata = {
     template: "%s | Hamsey",
   },
   description:
-    "Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative dating app.",
+    "Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative proximity-based social networking app.",
   metadataBase: new URL("https://hamsey.co"),
+  keywords: [
+    "Hamsey",
+    "proximity social network",
+    "connect nearby",
+    "social networking app",
+    "meet people nearby",
+    "local connections",
+    "safe social networking",
+  ],
+  authors: [{ name: "Hamsey - Neosolve Ventures India Ltd" }],
+  creator: "Hamsey",
+  publisher: "Hamsey - Neosolve Ventures India Ltd",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
+    locale: "en_US",
+    siteName: "Hamsey",
     title: "Hamsey - Connect with People Nearby",
     description:
       "Hamsey helps you connect with people nearby safely and securely.",
     url: "https://hamsey.co/",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey - From glance to hello, made easy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hamsey - Connect with People Nearby",
     description:
       "Hamsey helps you connect with people nearby safely and securely.",
-    images: ["/image/logo.png"],
+    images: ["/image/og-image.png"],
+    creator: "@hamseyapp",
   },
   alternates: {
     canonical: "/",
+  },
+  other: {
+    "theme-color": "#D91C4B",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
   },
 };
 
@@ -73,9 +109,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} ${playwrite.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SPX7B99M07"

@@ -13,7 +13,13 @@ export const metadata: Metadata = {
     description:
       "Request deletion of your Hamsey account. Submit your email and reason to initiate account deletion.",
     url: "https://hamsey.co/deleteaccount",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Delete Hamsey Account" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Delete Account | Hamsey",
+    description: "Request deletion of your Hamsey account.",
+    images: ["/image/og-image.png"],
   },
 };
 

@@ -27,7 +27,7 @@ const ThirdSection: React.FC<Props> = ({
           <Image
             className="second-section-image"
             src={imageUrl}
-            alt="second-section"
+            alt={`Hamsey app feature: ${title} ${titleSpan}`}
             width={800}
             height={600}
           />

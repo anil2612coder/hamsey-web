@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Hamsey - Connect with People Nearby",
   description:
-    "Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative dating app.",
+    "Hamsey helps you connect with people nearby safely and securely. Never miss a chance to meet someone special with our innovative proximity-based social networking app.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     description:
       "Hamsey helps you connect with people nearby safely and securely.",
     url: "https://hamsey.co/",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey - From glance to hello, made easy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hamsey - Connect with People Nearby",
     description:
       "Hamsey helps you connect with people nearby safely and securely.",
-    images: ["/image/logo.png"],
+    images: ["/image/og-image.png"],
   },
 };
 
@@ -33,7 +33,7 @@ export default function Home() {
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Hamsey Dating App",
+    name: "Hamsey",
     url: "https://hamsey.co/",
     potentialAction: {
       "@type": "SearchAction",
@@ -41,7 +41,7 @@ export default function Home() {
       "query-input": "required name=search_term_string",
     },
     description:
-      "Hamsey is a modern dating app that helps you connect with people nearby safely and securely.",
+      "Hamsey is a proximity-based social networking app that helps you connect with people nearby safely and securely.",
   };
 
   return (

@@ -13,7 +13,7 @@ const FifthSection: React.FC<Props> = ({ title, titleSpan, description }) => {
       <Image
         className="fifth-sec-img"
         src="/image/chats.png"
-        alt="chats"
+        alt="Hamsey app chat interface - message conversations"
         width={1200}
         height={800}
       />
@@ -26,7 +26,7 @@ const FifthSection: React.FC<Props> = ({ title, titleSpan, description }) => {
       <Image
         className="fifth-sec-img"
         src="/image/chats2.png"
-        alt="chats"
+        alt="Hamsey app chat interface - connecting with people nearby"
         width={1200}
         height={800}
       />

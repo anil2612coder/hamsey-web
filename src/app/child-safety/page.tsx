@@ -3,17 +3,24 @@ import Footer from "@/components/home/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Child Safety Standards | Hamsey Dating App",
+  title: "Child Safety Standards | Hamsey",
   description:
     "Read Hamsey's Child Safety Standards: CSAM prevention, reporting pathways, enforcement, and designated point of contact.",
   alternates: { canonical: "/child-safety" },
   openGraph: {
     type: "website",
-    title: "Child Safety Standards | Hamsey Dating App",
+    title: "Child Safety Standards | Hamsey",
     description:
       "Hamsey's standards against child sexual abuse and exploitation (CSAE).",
     url: "https://hamsey.co/child-safety",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey Child Safety Standards" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Child Safety Standards | Hamsey",
+    description:
+      "Hamsey's standards against child sexual abuse and exploitation (CSAE).",
+    images: ["/image/og-image.png"],
   },
 };
 
@@ -21,7 +28,7 @@ export default function ChildSafetyPage() {
   const childSafetySchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Child Safety Standards | Hamsey Dating App",
+    name: "Child Safety Standards | Hamsey",
     url: "https://hamsey.co/child-safety",
     description:
       "Hamsey's published standards and designated contact regarding child safety and CSAM prevention.",

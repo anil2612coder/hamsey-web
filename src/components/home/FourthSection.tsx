@@ -9,7 +9,7 @@ const FourthSection: React.FC = () => {
           <Image
             className="second-section-image"
             src="/image/3.webp"
-            alt="second-section"
+            alt="Hamsey secure messaging with end-to-end encryption"
             width={800}
             height={600}
           />

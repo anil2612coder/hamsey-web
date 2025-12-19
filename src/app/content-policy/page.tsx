@@ -3,16 +3,22 @@ import Footer from "@/components/home/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Content Policy | Hamsey Dating App",
+  title: "Content Policy | Hamsey",
   description:
-    "Read the content policy for Hamsey dating app. Learn about acceptable content, prohibited materials, and community guidelines.",
+    "Read the content policy for Hamsey. Learn about acceptable content, prohibited materials, and community guidelines.",
   alternates: { canonical: "/content-policy" },
   openGraph: {
     type: "website",
-    title: "Content Policy | Hamsey Dating App",
-    description: "Read the content policy for Hamsey dating app.",
+    title: "Content Policy | Hamsey",
+    description: "Read the content policy for Hamsey.",
     url: "https://hamsey.co/content-policy",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey Content Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Policy | Hamsey",
+    description: "Read the content policy for Hamsey. Learn about acceptable content and community guidelines.",
+    images: ["/image/og-image.png"],
   },
 };
 
@@ -20,14 +26,14 @@ export default function ContentPolicyPage() {
   const contentPolicySchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Content Policy | Hamsey Dating App",
+    name: "Content Policy | Hamsey",
     url: "https://hamsey.co/content-policy",
     description:
-      "Read the content policy for Hamsey dating app. Learn about acceptable content, prohibited materials, and community guidelines.",
+      "Read the content policy for Hamsey. Learn about acceptable content, prohibited materials, and community guidelines.",
     mainEntity: {
       "@type": "WebPageElement",
       name: "Content Policy Document",
-      text: "This content policy outlines the rules and guidelines for acceptable content on the Hamsey dating app.",
+      text: "This content policy outlines the rules and guidelines for acceptable content on Hamsey.",
     },
   } as const;
 
@@ -72,7 +78,7 @@ export default function ContentPolicyPage() {
                 </li>
                 <li>
                   <strong>Appropriate Images:</strong> Photos should be suitable
-                  for a dating platform
+                  for our platform
                 </li>
                 <li>
                   <strong>Accurate Information:</strong> Provide truthful
@@ -96,7 +102,7 @@ export default function ContentPolicyPage() {
                 </li>
                 <li>
                   <strong>Appropriate Language:</strong> Use language that is
-                  suitable for a dating platform
+                  suitable for our platform
                 </li>
                 <li>
                   <strong>Genuine Intentions:</strong> Communicate with genuine
@@ -266,7 +272,7 @@ export default function ContentPolicyPage() {
                 </li>
                 <li>
                   <strong>Appropriate Attire:</strong> Wear appropriate clothing
-                  suitable for a dating platform
+                  suitable for our platform
                 </li>
               </ul>
 
@@ -296,7 +302,7 @@ export default function ContentPolicyPage() {
                 </li>
                 <li>
                   <strong>Appropriate Topics:</strong> Keep conversations
-                  appropriate for a dating platform
+                  appropriate for our platform
                 </li>
                 <li>
                   <strong>Genuine Intentions:</strong> Communicate with genuine

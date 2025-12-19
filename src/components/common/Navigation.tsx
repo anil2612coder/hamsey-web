@@ -17,7 +17,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
           <Link href="/">
             <Image
               src="/image/logo.svg"
-              alt="Hemsey logo"
+              alt="Hamsey logo"
               width={150}
               height={40}
               priority
@@ -42,14 +42,13 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
           */}
           <button
             onClick={() =>
-              (window.location.href =
-                "https://play.google.com/store/apps/details?id=com.hamsey.co")
+            (window.location.href =
+              "https://play.google.com/store/apps/details?id=com.hamsey.co")
             }
-            className={`${
-              theme === "light"
+            className={`${theme === "light"
                 ? "btn-primary-bg-white-text"
                 : "btn-white-bg-black-text"
-            }`}
+              }`}
           >
             Download
           </button>

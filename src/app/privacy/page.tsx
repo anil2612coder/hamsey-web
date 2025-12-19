@@ -3,17 +3,24 @@ import Footer from "@/components/home/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Hamsey Dating App",
+  title: "Privacy Policy | Hamsey",
   description:
-    "Learn how Hamsey dating app collects, uses, and protects your personal information. Read our privacy policy to understand your data rights.",
+    "Learn how Hamsey collects, uses, and protects your personal information. Read our privacy policy to understand your data rights.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     type: "website",
-    title: "Privacy Policy | Hamsey Dating App",
+    title: "Privacy Policy | Hamsey",
     description:
-      "Learn how Hamsey dating app collects, uses, and protects your personal information.",
+      "Learn how Hamsey collects, uses, and protects your personal information.",
     url: "https://hamsey.co/privacy",
-    images: [{ url: "/image/logo.png" }],
+    images: [{ url: "/image/og-image.png", width: 1200, height: 630, alt: "Hamsey Privacy Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Hamsey",
+    description:
+      "Learn how Hamsey collects, uses, and protects your personal information.",
+    images: ["/image/og-image.png"],
   },
 };
 
@@ -21,14 +28,14 @@ export default function PrivacyPage() {
   const privacySchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Privacy Policy | Hamsey Dating App",
+    name: "Privacy Policy | Hamsey",
     url: "https://hamsey.co/privacy",
     description:
-      "Learn how Hamsey dating app collects, uses, and protects your personal information. Read our privacy policy to understand your data rights.",
+      "Learn how Hamsey collects, uses, and protects your personal information. Read our privacy policy to understand your data rights.",
     mainEntity: {
       "@type": "WebPageElement",
       name: "Privacy Policy Document",
-      text: "This privacy policy outlines how we collect and process your personal data when using the Hamsey dating app.",
+      text: "This privacy policy outlines how we collect and process your personal data when using the Hamsey app.",
     },
   } as const;
 
@@ -59,7 +66,7 @@ export default function PrivacyPage() {
                 Hamsey (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is
                 committed to protecting your privacy. This Privacy Policy
                 explains how we collect, use, disclose, and safeguard your
-                information when you use our proximity-based dating application.
+                information when you use our proximity-based social networking application.
                 Please read this Privacy Policy carefully. By accessing or using
                 our platform, you acknowledge that you have read, understood,
                 and agree to be bound by all the terms of this Privacy Policy.
@@ -125,7 +132,7 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong>Profile Management:</strong> Create and maintain your
-                  dating profile
+                  profile
                 </li>
                 <li>
                   <strong>Safety:</strong> Verify user identities and prevent
@@ -187,7 +194,7 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong>Location-Based Features:</strong> Enable
-                  location-specific dating features
+                  location-specific features
                 </li>
                 <li>
                   <strong>Safety:</strong> Help ensure user safety in real-world
