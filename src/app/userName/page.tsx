@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function UserNameRedirect() {
+function UserNameRedirectContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const code = searchParams.get("code");
@@ -20,5 +20,13 @@ export default function UserNameRedirect() {
         <div className="flex min-h-screen items-center justify-center bg-white text-black">
             <p>Redirecting...</p>
         </div>
+    );
+}
+
+export default function UserNameRedirectPage() {
+    return (
+        <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-white text-black">Loading...</div>}>
+            <UserNameRedirectContent />
+        </Suspense>
     );
 }
