@@ -12,9 +12,9 @@ function ProfileContent() {
     useEffect(() => {
         if (!username) return;
 
-        const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+        const userAgent = navigator.userAgent;
         const isAndroid = /android/i.test(userAgent);
-        const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream;
+        const isIOS = /iPad|iPhone|iPod/.test(userAgent);
 
         if (isAndroid || isIOS) {
             const appUrl = `hamsey://other_profile?username=${username}`;
