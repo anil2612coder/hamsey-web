@@ -17,9 +17,7 @@ const AboutCtaSection: React.FC = () => {
             <button className="btn-white-bg-primary-text">
               Download for iOS
             </button>
-            <button className="btn-white-bg-primary-text">
-              Download for Android
-            </button>
+
           </div>
         </div>
         <div className="about-cta-image animate-on-scroll slide-right">

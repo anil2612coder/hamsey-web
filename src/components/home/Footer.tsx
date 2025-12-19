@@ -20,7 +20,7 @@ const HemseySectionFooter: React.FC = () => {
     <div className="footer-container">
       <div className="footer-wrapper animate-fade-in">
         <div className="footer-top-section">
-          <div className="footer-qr-container animate-fade-in">
+          {/* <div className="footer-qr-container animate-fade-in">
             <div className="footer-qr-inner">
               <Image
                 src={qrCodes[selectedApp]}
@@ -52,7 +52,7 @@ const HemseySectionFooter: React.FC = () => {
                 </svg>
               </a>
             </div>
-          </div>
+          </div> */}
 
           <div className="footer-app-info animate-fade-in delay-200">
             <div className="footer-app-text">
@@ -98,7 +98,7 @@ const HemseySectionFooter: React.FC = () => {
               </div>
             </div>
 
-            <div className="footer-app-selector">
+            {/* <div className="footer-app-selector">
               <button
                 className={`footer-app-button ${selectedApp === "android" ? "footer-app-button-active" : ""
                   }`}
@@ -113,7 +113,7 @@ const HemseySectionFooter: React.FC = () => {
               >
                 iOS App
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
