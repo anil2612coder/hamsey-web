@@ -22,19 +22,32 @@ function DownloadPageContent() {
     const campaign = searchParams.get("campaign") || "unknown";
 
     useEffect(() => {
-        initMixpanel();
-        trackDownloadPageViewed(source, campaign);
+        // Initialize Mixpanel and track page view after it's ready
+        initMixpanel(() => {
+            trackDownloadPageViewed(source, campaign);
+        });
     }, [source, campaign]);
 
     const handleAppStoreClick = () => {
-        trackStoreButtonClicked("app_store", source, campaign);
-        window.location.href = STORE_LINKS.appStore;
+        trackStoreButtonClicked("app_store", source, campaign, () => {
+            window.location.href = STORE_LINKS.appStore;
+        });
+        // Fallback redirect after 500ms if callback doesn't fire
+        setTimeout(() => {
+            window.location.href = STORE_LINKS.appStore;
+        }, 500);
     };
 
     const handlePlayStoreClick = () => {
-        trackStoreButtonClicked("play_store", source, campaign);
-        window.location.href = STORE_LINKS.playStore;
+        trackStoreButtonClicked("play_store", source, campaign, () => {
+            window.location.href = STORE_LINKS.playStore;
+        });
+        // Fallback redirect after 500ms if callback doesn't fire
+        setTimeout(() => {
+            window.location.href = STORE_LINKS.playStore;
+        }, 500);
     };
+
 
     return (
         <div className="download-page">

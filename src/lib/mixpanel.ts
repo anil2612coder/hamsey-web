@@ -4,16 +4,25 @@ const MIXPANEL_TOKEN = '33f3c8cff1e76f375778b5962a0c0d33';
 
 let isInitialized = false;
 
-export const initMixpanel = () => {
-    if (isInitialized || typeof window === 'undefined') return;
+export const initMixpanel = (callback?: () => void) => {
+    if (typeof window === 'undefined') return;
+
+    if (isInitialized) {
+        callback?.();
+        return;
+    }
 
     if (MIXPANEL_TOKEN) {
         mixpanel.init(MIXPANEL_TOKEN, {
             debug: process.env.NODE_ENV === 'development',
-            track_pageview: true,
+            track_pageview: false, // We'll track manually
             persistence: 'localStorage',
+            loaded: () => {
+                isInitialized = true;
+                console.log('[Mixpanel] Initialized successfully');
+                callback?.();
+            }
         });
-        isInitialized = true;
     } else {
         console.warn('Mixpanel token not found. Analytics disabled.');
     }
@@ -21,9 +30,10 @@ export const initMixpanel = () => {
 
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isInitialized) {
-        console.log('[Mixpanel Mock]', eventName, properties);
+        console.log('[Mixpanel] Not initialized, event not sent:', eventName, properties);
         return;
     }
+    console.log('[Mixpanel] Tracking:', eventName, properties);
     mixpanel.track(eventName, properties);
 };
 
@@ -38,13 +48,25 @@ export const trackPageView = (pageName: string, properties?: Record<string, unkn
 export const trackStoreButtonClicked = (
     store: 'app_store' | 'play_store',
     source: string,
-    campaign: string
+    campaign: string,
+    callback?: () => void
 ) => {
-    trackEvent('Store Button Clicked', {
+    if (!isInitialized) {
+        console.log('[Mixpanel] Not initialized, redirecting immediately');
+        callback?.();
+        return;
+    }
+
+    mixpanel.track('Store Button Clicked', {
         store,
         source,
         campaign,
         timestamp: new Date().toISOString(),
+    }, {
+        send_immediately: true
+    }, () => {
+        console.log('[Mixpanel] Store button click tracked, redirecting...');
+        callback?.();
     });
 };
 
