@@ -1966,7 +1966,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 20%, rgba(217, 28, 75, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(217, 28, 75, 0.1) 0%, transparent 40%),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
@@ -1979,7 +1979,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
@@ -2028,15 +2028,22 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto 2rem;
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(217, 28, 75, 0.3),
     0 0 60px rgba(217, 28, 75, 0.2);
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .download-app-icon img {
@@ -2176,7 +2183,7 @@ body {
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
   border-radius: 40px;
   padding: 12px;
-  box-shadow: 
+  box-shadow:
     0 40px 80px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -2249,34 +2256,63 @@ body {
 }
 
 @media (max-width: 640px) {
+  .download-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .download-main {
+    padding: 1rem 1.25rem 2rem;
+  }
+
+  .download-app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    margin-bottom: 1.5rem;
+  }
+
   .download-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .download-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .download-description {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 
   .download-buttons {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .download-store-btn {
     width: 100%;
     max-width: 280px;
     justify-content: center;
+    padding: 0.75rem 1.25rem;
   }
 
   .download-features {
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
-  .download-app-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
+  .download-feature {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.8rem;
+  }
+
+  .download-footer {
+    padding: 1rem 1.25rem;
+  }
+
+  .download-footer p {
+    font-size: 0.75rem;
   }
 }

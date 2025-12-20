@@ -69,7 +69,7 @@ function DownloadPageContent() {
                         />
                     </div>
 
-                    {/* Title & Description */}
+
                     <h1 className="download-title animate-slide-up">
                         Download <span className="download-title-highlight">Hamsey</span>
                     </h1>
@@ -82,7 +82,6 @@ function DownloadPageContent() {
                         Your next meaningful connection is just a tap away.
                     </p>
 
-                    {/* Store Buttons */}
                     <div className="download-buttons animate-slide-up delay-300">
                         <button
                             onClick={handlePlayStoreClick}

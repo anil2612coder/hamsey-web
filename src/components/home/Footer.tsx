@@ -20,39 +20,6 @@ const HemseySectionFooter: React.FC = () => {
     <div className="footer-container">
       <div className="footer-wrapper animate-fade-in">
         <div className="footer-top-section">
-          {/* <div className="footer-qr-container animate-fade-in">
-            <div className="footer-qr-inner">
-              <Image
-                src={qrCodes[selectedApp]}
-                alt={`QR code to download Hamsey ${selectedApp === 'android' ? 'on Google Play' : 'on App Store'}`}
-                className="footer-qr-image"
-                width={158}
-                height={158}
-              />
-              <a
-                href={storeLinks[selectedApp]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-download-row"
-              >
-                <span className="footer-download-text">
-                  Download for {selectedApp === 'android' ? 'Android' : 'iOS'}
-                </span>
-                <svg
-                  width="15"
-                  height="14"
-                  viewBox="0 0 15 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.8526 3.86574L2.51771 13.2006L0.983887 11.6668L10.3187 2.33191L2.09131 2.33191L2.09131 0.163086H14.0214V12.0932H11.8526V3.86574Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div> */}
 
           <div className="footer-app-info animate-fade-in delay-200">
             <div className="footer-app-text">
