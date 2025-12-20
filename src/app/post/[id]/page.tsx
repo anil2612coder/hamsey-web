@@ -80,7 +80,7 @@ export default function PostRedirectPage() {
                     {!isRedirecting && (
                         <div className="animate-fade-in">
                             <p className="download-description animate-slide-up delay-200" style={{ marginTop: '1rem' }}>
-                                Don't have the app? Download now to view this post.
+                                Don&apos;t have the app? Download now to view this post.
                             </p>
 
                             <div className="download-buttons animate-slide-up delay-300">

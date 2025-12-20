@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutTeamSection: React.FC = () => {
   const teamMembers = [
@@ -34,7 +35,12 @@ const AboutTeamSection: React.FC = () => {
               key={index}
             >
               <div className="team-member-image">
-                <img src={member.image} alt={member.name} />
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className="team-member-info">
                 <h3 className="team-member-name">{member.name}</h3>

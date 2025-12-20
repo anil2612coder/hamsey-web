@@ -1,19 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const HemseySectionFooter: React.FC = () => {
-  const [selectedApp, setSelectedApp] = useState<"android" | "ios">("android");
-
   const storeLinks = {
     android: "https://play.google.com/store/apps/details?id=com.hamsey.co",
     ios: "https://apps.apple.com/in/app/hamsey-from-glance-to-hello/id6755126171",
-  } as const;
-
-  const qrCodes = {
-    android: "/image/QR Code.png",
-    ios: "/image/QR Code.png",
   } as const;
 
   return (
