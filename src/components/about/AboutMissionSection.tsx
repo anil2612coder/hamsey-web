@@ -16,7 +16,7 @@ const AboutMissionSection: React.FC = () => {
             Our <span>Mission</span>
           </h2>
           <p className="about-section-text about-section-text-mision">
-            At Hemsey, we believe that the most meaningful connections often
+            At Hamsey, we believe that the most meaningful connections often
             begin with a glance. Our mission is to empower people to act on
             those moments of attraction safely and confidently.
           </p>

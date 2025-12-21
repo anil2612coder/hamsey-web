@@ -10,7 +10,7 @@ const AboutCtaSection: React.FC = () => {
             Ready to transform glances into conversations?
           </h2>
           <p className="about-cta-text">
-            Download Hemsey today and start making meaningful connections with
+            Download Hamsey today and start making meaningful connections with
             people you encounter in your daily life.
           </p>
           <div className="about-cta-buttons">

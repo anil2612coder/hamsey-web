@@ -23,7 +23,7 @@ const AboutTeamSection: React.FC = () => {
           Meet Our <span>Team</span>
         </h2>
         <p className="about-section-text text-center team-intro animate-on-scroll slide-up delay-200">
-          The passionate individuals behind Hemsey are united by a shared
+          The passionate individuals behind Hamsey are united by a shared
           vision: to help people form meaningful connections in an increasingly
           digital world.
         </p>

@@ -17,7 +17,7 @@ const AboutStorySection: React.FC = () => {
             exchanging glances but never words.
           </p>
           <p className="about-section-text">
-            Founded in 2025, Hemsey was born from the desire to bridge this gap
+            Founded in 2025, Hamsey was born from the desire to bridge this gap
             – to help people transform those fleeting moments of connection into
             meaningful relationships. Our team of passionate innovators,
             designers, and relationship experts came together with one mission:
