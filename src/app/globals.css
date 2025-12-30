@@ -412,14 +412,15 @@ body,
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 600px;
+  text-align: center;
 }
 
 .hero-title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 52px;
+  font-size: 48px;
   line-height: 58px;
   text-align: center;
   letter-spacing: -0.02em;
@@ -455,7 +456,7 @@ body,
   font-weight: 500;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid #ffffff;
 }
 
 .app-store-btn:hover {

@@ -59,7 +59,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFF6DD] border-b border-[#000000] h-[80px] flex items-center justify-center">
-      <div className="w-full max-w-[95%] mx-auto flex justify-between items-center ">
+      <div className="w-full max-w-[95%]  lg:max-w-[90%] mx-auto flex justify-between items-center ">
         {/* Logo */}
         <div className="flex-shrink-0 z-50">
           <Link href="/">
@@ -88,13 +88,21 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
         </div>
 
 
-        <div className="hidden lg:block">
-          <Link href="/context-ai">
-            <button className="flex items-center gap-2 border-2 border-[#D91C4B] text-[#D91C4B] bg-[#FFDBDB] rounded-full font-semibold hover:bg-[#D91C4B] hover:text-white transition-all duration-300 p-4">
-              context AI <BsStars className="text-lg" />
-            </button>
-          </Link>
-        </div>
+
+       <div className="hidden lg:block">
+<Link
+                  href="/context-ai"
+                  onClick={toggleMenu}
+                  className="inline-flex h-[39px] w-[150px] items-center justify-center gap-2
+                    rounded-full border-2 border-[#D91C4B]
+                    bg-[#FFDBDB] px-6
+                    text-base font-semibold leading-none text-[#D91C4B]
+                    transition-all duration-300
+                    hover:bg-[#D91C4B] hover:text-white"
+                >
+                  context AI <BsStars className="text-base" />
+                </Link>
+</div>
 
 
         <button
@@ -132,20 +140,18 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div
-                  custom={navLinks.length}
-                  variants={itemVariants}
-                  initial="closed"
-                  animate="open"
+<Link
+                  href="/context-ai"
+                  onClick={toggleMenu}
+                  className="inline-flex h-[39px] w-[150px] items-center justify-center gap-2
+                    rounded-full border-2 border-[#D91C4B]
+                    bg-[#FFDBDB] px-6
+                    text-base font-semibold leading-none text-[#D91C4B]
+                    transition-all duration-300
+                    hover:bg-[#D91C4B] hover:text-white"
                 >
-                  <Link
-                    href="/context-ai"
-                    onClick={toggleMenu}
-                    className="flex items-center gap-2 border-2 border-[#D91C4B] text-[#D91C4B] px-8 py-3 rounded-full font-bold text-xl bg-[#FFDBDB] hover:bg-[#D91C4B] hover:text-white transition-all duration-300 mt-4"
-                  >
-                    context AI <BsStars className="text-xl" />
-                  </Link>
-                </motion.div>
+                  context AI <BsStars className="text-base" />
+                </Link>
               </div>
             </motion.div>
           )}
