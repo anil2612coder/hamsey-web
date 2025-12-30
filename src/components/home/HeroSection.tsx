@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
       <Navigation theme="dark" />
       <div className="hero-content">
         <h1 className="hero-title animate-fade-in">
-          From glance to hello, <br /> made easy
+          from glance to hello
         </h1>
         <p className="hero-subtitle animate-fade-in delay-100">
           Connect with people nearby safely and securely

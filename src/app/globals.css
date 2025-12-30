@@ -382,7 +382,7 @@ body {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  background-image: url("/image/hamsey-hero-bg.webp");
+  background-image: url("/image/heroImage.png");
   background-size: cover;
   background-position: center;
   display: flex;
