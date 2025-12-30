@@ -15,8 +15,9 @@ const HeroSection: React.FC = () => {
         <h1 className="hero-title animate-fade-in">
           from glance to hello
         </h1>
-        <p className="hero-subtitle animate-fade-in delay-100">
-          Connect with people nearby safely and securely
+        <p className="hero-subtitle animate-fade-in delay-100 ">
+        Bypass hesitation, anxiety and fear of public judgement,
+connect with people within 100meters instantly and express your intentions
         </p>
         <div className="hero-app-buttons animate-slide-up delay-300">
           <a

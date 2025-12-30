@@ -80,7 +80,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-black font-medium text-lg hover:text-[#D91C4B] transition-colors font-sans"
+              className="text-black font-medium text-[16px] hover:text-[#D91C4B] transition-colors font-sans"
             >
               {link.name}
             </Link>
