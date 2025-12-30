@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
 import { BsStars } from "react-icons/bs";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 
 type Props = { theme?: "dark" | "light" };
 
@@ -22,7 +22,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
     { name: "support", href: "/support" },
   ];
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       y: "-100%",
@@ -43,7 +43,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     closed: { opacity: 0, y: 20 },
     open: (i: number) => ({
       opacity: 1,
