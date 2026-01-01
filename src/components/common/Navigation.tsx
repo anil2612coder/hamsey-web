@@ -58,61 +58,65 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFF6DD] border-b border-[#000000] h-[80px] flex items-center justify-center">
+   <nav className="fixed top-0 left-0 right-0 z-50  h-[80px] flex items-center justify-center">
       <div className="w-full max-w-[95%]  lg:max-w-[90%] mx-auto flex justify-between items-center ">
-        {/* Logo */}
-        <div className="flex-shrink-0 z-50">
-          <Link href="/">
+
+        {/* Left: Logo Group */}
+        <div className="flex gap-2 lg:gap-3  z-50">
+          <Link href="/" >
             <Image
-              src="/image/newlogo.png"
+              src="/image/newlogo1.png"
               alt="Hamsey logo"
               width={100}
-              height={20}
+              height={30}
               priority
               className="object-contain"
             />
           </Link>
+          <div className="w-[1px] h-12 bg-white"></div>
+         <div className="flex-col  text-white text-left font-figtree">
+          <p>from</p>
+          <p>Glance to hello</p>
+         </div>
         </div>
 
-
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-black font-medium text-[16px] hover:text-[#D91C4B] transition-colors font-sans"
-            >
-              {link.name}
-            </Link>
-          ))}
+        
+        <div className="hidden lg:flex items-center justify-center ">
+          <div className=" backdrop-blur-lg rounded-lg  flex gap-8 h-[40px] w-[500px] xl:w-[550px] items-center justify-center px-12">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-white/90 hover:text-white font-medium text-[15px] transition-all hover:scale-105"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
 
+      
+        <div className="flex items-center gap-4 z-50">
+          <Link
+            href="/context-ai"
+            className="hidden lg:inline-flex h-[40px] w-[120px] px-6 items-center justify-center gap-2
+              rounded-lg backdrop-blur-lg xl:bg-[#3e3e3e]/40 
+              text-white text-[14px] font-medium
+              transition-all duration-300
+              hover:bg-[#4e4e4e] hover:scale-105"
+          >
+            Context AI <BsStars className="text-white" />
+          </Link>
 
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden text-3xl text-white focus:outline-none p-1"
+          >
+            {isOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
 
-       <div className="hidden lg:block">
-<Link
-                  href="/context-ai"
-                  onClick={toggleMenu}
-                  className="inline-flex h-[39px] w-[150px] items-center justify-center gap-2
-                    rounded-full border-2 border-[#D91C4B]
-                    bg-[#FFDBDB] px-6
-                    text-base font-semibold leading-none text-[#D91C4B]
-                    transition-all duration-300
-                    hover:bg-[#D91C4B] hover:text-white"
-                >
-                  context AI <BsStars className="text-base" />
-                </Link>
-</div>
-
-
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden text-3xl text-black z-50 focus:outline-none"
-        >
-          {isOpen ? <HiX /> : <HiMenu />}
-        </button>
-
-
+      
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -120,7 +124,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="fixed inset-0 bg-[#FFF6DD] z-40 flex flex-col justify-center items-center lg:hidden"
+              className="fixed inset-0 bg-[#1a1a1a]/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center lg:hidden"
             >
               <div className="flex flex-col items-center gap-8">
                 {navLinks.map((link, i) => (
@@ -134,24 +138,30 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
-                      className="text-black font-medium text-2xl hover:text-[#D91C4B] transition-colors font-sans"
+                      className="text-white font-medium text-3xl hover:text-[#D91C4B] transition-colors font-sans"
                     >
                       {link.name}
                     </Link>
                   </motion.div>
                 ))}
-<Link
-                  href="/context-ai"
-                  onClick={toggleMenu}
-                  className="inline-flex h-[39px] w-[150px] items-center justify-center gap-2
-                    rounded-full border-2 border-[#D91C4B]
-                    bg-[#FFDBDB] px-6
-                    text-base font-semibold leading-none text-[#D91C4B]
-                    transition-all duration-300
-                    hover:bg-[#D91C4B] hover:text-white"
+
+                <motion.div
+                  variants={itemVariants}
+                  custom={navLinks.length}
+                  initial="closed"
+                  animate="open"
                 >
-                  context AI <BsStars className="text-base" />
-                </Link>
+                  <Link
+                    href="/context-ai"
+                    onClick={toggleMenu}
+                    className="inline-flex h-[45px] px-8 items-center justify-center gap-2
+                        rounded-full bg-[#3e3e3e] border border-white/10
+                        text-white text-lg font-medium mt-4
+                        transition-all duration-300"
+                  >
+                    Context AI <BsStars />
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
           )}

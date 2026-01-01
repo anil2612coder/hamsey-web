@@ -4,6 +4,7 @@ import {
   Geist,
   Geist_Mono,
   Montserrat,
+  Figtree ,
   Poppins,
   Playwrite_AU_SA,
 } from "next/font/google";
@@ -13,6 +14,12 @@ import AnimationInitializer from "@/components/AnimationInitializer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-figtree",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -111,7 +118,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} ${playwrite.variable} antialiased`}
+        className={`${geistSans.variable} ${figtree.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} ${playwrite.variable} antialiased`}
         suppressHydrationWarning
       >
         <Script
