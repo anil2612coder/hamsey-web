@@ -82,7 +82,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
 
         
         <div className="hidden lg:flex items-center justify-center ">
-          <div className=" backdrop-blur-lg rounded-lg  flex gap-8 h-[40px] w-[500px] xl:w-[550px] items-center justify-center px-12">
+          <div className=" backdrop-blur-lg bg-[#3e3e3e]/40 rounded-lg  flex gap-8 h-[40px] w-[500px] xl:w-[550px] items-center justify-center px-12">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -124,7 +124,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="fixed inset-0 bg-[#1a1a1a]/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center lg:hidden"
+              className="fixed inset-0  backdrop-blur-xl z-40 flex flex-col justify-center items-center lg:hidden"
             >
               <div className="flex flex-col items-center gap-8">
                 {navLinks.map((link, i) => (
@@ -138,7 +138,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
-                      className="text-white font-medium text-3xl hover:text-[#D91C4B] transition-colors font-sans"
+                      className="text-white font-medium text-2xl hover:text-[#D91C4B] transition-colors font-sans"
                     >
                       {link.name}
                     </Link>
@@ -154,7 +154,7 @@ const Navigation: React.FC<Props> = ({ theme = "dark" }) => {
                   <Link
                     href="/context-ai"
                     onClick={toggleMenu}
-                    className="inline-flex h-[45px] px-8 items-center justify-center gap-2
+                    className="inline-flex h-[40px] w-[145px] px-8 items-center justify-center gap-2
                         rounded-full bg-[#3e3e3e] border border-white/10
                         text-white text-lg font-medium mt-4
                         transition-all duration-300"
